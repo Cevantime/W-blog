@@ -30,10 +30,10 @@
 		<script src="<?php echo baseUrl('assets/js/typeahead.jquery.min.js'); ?>"></script>
 
 		<link href="<?php echo baseUrl('assets/css/clean-blog.min.css'); ?>" rel="stylesheet">
-		
+
 		<!-- Theme JavaScript -->
 		<script src="<?php echo baseUrl('assets/js/clean-blog.min.js'); ?>"></script>
-		
+
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
@@ -74,14 +74,30 @@
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><b><?php if ($this->isConnected()): ?><?php echo $this->getUser()['username']; ?><?php else: ?>Se connecter<?php endif; ?></b> <span class="caret"></span></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<b><?php if ($this->isConnected()): ?>
+										<?php echo $this->getUser()['username']; ?>
+									<?php else: ?>
+										Se connecter
+									<?php endif; ?></b> 
+								<span class="caret"></span></a>
 							<ul id="login-dp" class="dropdown-menu">
 								<li class="container-fluid">
 									<div class="row">
 										<?php if ($this->isConnected()): ?>
 											<div class="col-md-12">
-												<p><a class="btn btn-danger" href="<?php echo baseUrl('logout'); ?>" title="Se déconnecter">Se déconnecter</a> </p>
-												<?php if ($this->isAllowed(array('admin', 'superadmin'))): ?><p><a href="<?php echo baseUrl('admin'); ?>" class="btn btn-primary" title="Ajouter un article">Accéder à l'administration</a><?php endif; ?></p>
+												<p>
+													<a class="btn btn-danger" href="<?php echo baseUrl('logout'); ?>" title="Se déconnecter">
+														Se déconnecter
+													</a> 
+												</p>
+												<?php if ($this->isAllowed(array('admin', 'superadmin'))): ?>
+													<p>
+														<a href="<?php echo baseUrl('admin'); ?>" class="btn btn-primary" title="Ajouter un article">
+															Accéder à l'administration
+														</a>
+													</p>
+												<?php endif; ?>
 											</div>
 										<?php else: ?>
 											<div class="col-md-12">
@@ -183,7 +199,7 @@
 
 		<!-- Bootstrap Core JavaScript -->
 		<script src="<?php echo baseUrl('assets/js/bootstrap/bootstrap.min.js'); ?>"></script>
-		
-		
+
+
 	</body>
 </html>

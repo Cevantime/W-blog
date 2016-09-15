@@ -69,7 +69,4 @@ class PlatesExtensions implements ExtensionInterface
 		return $this->isConnected();
 	}
 	
-	public function formatDate() {
-		
-	}
 }

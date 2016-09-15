@@ -12,6 +12,7 @@ class LoginController extends BaseController {
 	 */
 	public function form() {
 		$datas = array();
+		
 		if ($_POST && isset($_POST['password'],$_POST['username'])) {
 			
 			// Si la requête est un post, on commence par rendre filtrer les données
@@ -40,7 +41,6 @@ class LoginController extends BaseController {
 			 */
 			$datas = $post;
 		}
-		
 		$this->show('login/form', array('datas' => $datas));
 	}
 
